@@ -1,0 +1,7 @@
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <!-- This is a placeholder signature SVG -->
+  <!-- Replace with actual handwritten signature -->
+  <path d="M 10 40 Q 30 10, 50 40 T 90 40" stroke="#1A1A1A" stroke-width="2" fill="none"/>
+  <path d="M 100 30 L 120 45 L 100 45" stroke="#1A1A1A" stroke-width="2" fill="none"/>
+  <path d="M 130 25 Q 140 20, 150 25 Q 160 30, 150 35 Q 140 40, 130 35" stroke="#1A1A1A" stroke-width="2" fill="none"/>
+</svg>
