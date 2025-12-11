@@ -56,10 +56,9 @@ export default async function Home() {
   ]);
 
   const heroData = {
-    title: 'Namaste — Our Story',
-    subtitle: 'Local-first, safe, and scalable ride solutions — built for cities and enterprises. Making everyday travel simple, safe, and respectful.',
+    title: 'Namaste',
+    subtitle: '',
     ctas: [
-      { label: 'Contact Sales', href: '#contact', primary: true },
       { label: 'Join Waitlist', href: '#contact', primary: false },
     ],
     media: {
@@ -70,13 +69,13 @@ export default async function Home() {
   };
 
   const founderData = {
-    photo: '/images/team/ravi.jpg',
-    name: 'Ravi Kumar',
+    photo: '/images/team/harry.jpg',
+    name: 'Harry',
     title: 'Founder & CEO',
     paragraphs: [
-      'We built Namaste to make everyday travel simple, safe, and respectful. Coming from a background in technology and logistics, I witnessed firsthand the challenges people face in finding reliable, affordable transportation.',
-      'Our mission goes beyond just providing rides. We are creating opportunities for driver-partners, supporting local communities, and building a transportation network that puts people first. Every decision we make is guided by our commitment to safety, transparency, and respect.',
-      'As we grow across India, we remain focused on our core values: treating every rider with dignity, empowering our driver-partners, and contributing positively to the cities we serve. This is just the beginning of our journey.',
+      '',
+      '',
+      '',
     ],
     signatureSvg: '/images/signature.svg',
   };
@@ -101,8 +100,8 @@ export default async function Home() {
 
   const testimonial = {
     quote: 'Namaste Rides has transformed how our company handles employee transportation. The reliability and service quality are outstanding.',
-    author: 'Amit Desai',
-    role: 'HR Director, Tech Solutions Inc.',
+    author: '',
+    role: '',
   };
 
   const offerings = [
