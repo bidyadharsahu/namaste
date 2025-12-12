@@ -10,18 +10,24 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
+          black: '#000000',
+          'gray-dark': '#0A0A0A',
+          'gray-mid': '#1A1A1A',
+          'gray-light': '#2A2A2A',
+          red: '#DC0000',
+          'red-dark': '#B00000',
+          'red-light': '#FF0000',
           yellow: '#FFD700',
-          orange: '#FF8C00',
-          'orange-light': '#FFA500',
-          'orange-dark': '#FF6B00',
+          'yellow-dark': '#D4AF37',
           white: '#FFFFFF',
-          charcoal: '#1A1A1A',
-          'charcoal-light': '#2D2D2D',
+          'white-off': '#F5F5F5',
+          gold: '#D4AF37',
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
+        luxury: ['Cormorant Garamond', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

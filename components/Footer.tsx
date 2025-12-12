@@ -1,93 +1,183 @@
 'use client';
 
 import Link from 'next/link';
-import { FiMail, FiMapPin, FiTwitter, FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiTwitter, FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const footerLinks = {
+    company: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Our Fleet', href: '/fleet' },
+      { label: 'Services', href: '/services' },
+      { label: 'Team', href: '/team' },
+    ],
+    services: [
+      { label: 'Corporate Transport', href: '/services#corporate' },
+      { label: 'Special Events', href: '/services#events' },
+      { label: 'Airport Services', href: '/services#airport' },
+      { label: 'City Tours', href: '/services#tours' },
+    ],
+    resources: [
+      { label: 'Newsroom', href: '/newsroom' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Contact', href: '/contact' },
+    ],
+  };
+
   return (
-    <footer className="bg-brand-charcoal text-white" id="contact">
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-brand-black border-t border-brand-gold/20">
+      <div className="container-custom py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-bold text-brand-yellow mb-4">Namaste Rides</h3>
-            <p className="text-gray-300 mb-4">
-              Local-first, safe, and scalable ride solutions for cities and enterprises.
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center space-x-3 mb-6 group">
+              <div className="w-14 h-14 bg-brand-red flex items-center justify-center transition-all duration-300 group-hover:bg-brand-red-light">
+                <span className="text-white font-luxury text-2xl">N</span>
+              </div>
+              <span className="text-2xl font-luxury font-bold text-brand-white tracking-wider">
+                NAMASTE<span className="text-brand-red">.</span>
+              </span>
+            </Link>
+            <p className="text-brand-gray-light mb-8 leading-relaxed max-w-md">
+              Experience the pinnacle of luxury transportation. Where every journey is crafted to perfection.
             </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-3 mb-8">
+              <a href="tel:+15551234567" className="flex items-center gap-3 text-brand-gray-light hover:text-brand-gold transition-colors">
+                <FiPhone size={18} />
+                <span>+1 (555) 123-4567</span>
+              </a>
+              <a href="mailto:namasterides26@gmail.com" className="flex items-center gap-3 text-brand-gray-light hover:text-brand-gold transition-colors">
+                <FiMail size={18} />
+                <span>namasterides26@gmail.com</span>
+              </a>
+              <div className="flex items-start gap-3 text-brand-gray-light">
+                <FiMapPin size={18} className="mt-1" />
+                <span>123 Luxury Drive<br />San Francisco, CA 94102</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" 
-                 className="hover:text-brand-orange transition-colors" aria-label="Twitter">
-                <FiTwitter size={20} />
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-brand-gray-dark border border-brand-gold/20 hover:border-brand-gold hover:bg-brand-gold/10 flex items-center justify-center transition-all duration-300"
+                aria-label="Twitter"
+              >
+                <FiTwitter size={18} className="text-brand-white" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
-                 className="hover:text-brand-orange transition-colors" aria-label="LinkedIn">
-                <FiLinkedin size={20} />
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-brand-gray-dark border border-brand-gold/20 hover:border-brand-gold hover:bg-brand-gold/10 flex items-center justify-center transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <FiLinkedin size={18} className="text-brand-white" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
-                 className="hover:text-brand-orange transition-colors" aria-label="Facebook">
-                <FiFacebook size={20} />
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-brand-gray-dark border border-brand-gold/20 hover:border-brand-gold hover:bg-brand-gold/10 flex items-center justify-center transition-all duration-300"
+                aria-label="Facebook"
+              >
+                <FiFacebook size={18} className="text-brand-white" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
-                 className="hover:text-brand-orange transition-colors" aria-label="Instagram">
-                <FiInstagram size={20} />
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-brand-gray-dark border border-brand-gold/20 hover:border-brand-gold hover:bg-brand-gold/10 flex items-center justify-center transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <FiInstagram size={18} className="text-brand-white" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Company Links */}
           <div>
-            <h4 className="font-bold mb-4 text-brand-yellow">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link href="/#about" className="text-gray-300 hover:text-brand-orange transition-colors">About Us</Link></li>
-              <li><Link href="/#team" className="text-gray-300 hover:text-brand-orange transition-colors">Our Team</Link></li>
-              <li><Link href="/#offerings" className="text-gray-300 hover:text-brand-orange transition-colors">Offerings</Link></li>
-              <li><Link href="/careers" className="text-gray-300 hover:text-brand-orange transition-colors">Careers</Link></li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-bold mb-4 text-brand-yellow">Resources</h4>
-            <ul className="space-y-2">
-              <li><Link href="/newsroom" className="text-gray-300 hover:text-brand-orange transition-colors">Newsroom</Link></li>
-              <li><Link href="/blog" className="text-gray-300 hover:text-brand-orange transition-colors">Blog</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-brand-orange transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-brand-orange transition-colors">Terms of Service</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-bold mb-4 text-brand-yellow">Contact</h4>
+            <h4 className="font-luxury font-bold mb-6 text-brand-white text-lg uppercase tracking-wider">
+              Company
+            </h4>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-2">
-                <FiMapPin className="mt-1 text-brand-orange flex-shrink-0" />
-                <span className="text-gray-300">
-                  123 Business District<br />
-                  Bangalore, KA 560001<br />
-                  India
-                </span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <FiMail className="text-brand-orange" />
-                <a href="mailto:press@namasterides.com" className="text-gray-300 hover:text-brand-orange transition-colors">
-                  press@namasterides.com
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <FiMail className="text-brand-orange" />
-                <a href="mailto:business@namasterides.com" className="text-gray-300 hover:text-brand-orange transition-colors">
-                  business@namasterides.com
-                </a>
-              </li>
+              {footerLinks.company.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href} 
+                    className="text-brand-gray-light hover:text-brand-gold transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Links */}
+          <div>
+            <h4 className="font-luxury font-bold mb-6 text-brand-white text-lg uppercase tracking-wider">
+              Services
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href} 
+                    className="text-brand-gray-light hover:text-brand-gold transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources Links */}
+          <div>
+            <h4 className="font-luxury font-bold mb-6 text-brand-white text-lg uppercase tracking-wider">
+              Resources
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.resources.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href} 
+                    className="text-brand-gray-light hover:text-brand-gold transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Namaste Rides. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-brand-gold/20">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-brand-gray-light text-sm">
+              © {currentYear} Namaste Rides. All rights reserved.
+            </p>
+            <div className="flex gap-8">
+              <Link href="/privacy" className="text-brand-gray-light hover:text-brand-gold transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-brand-gray-light hover:text-brand-gold transition-colors text-sm">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-brand-gray-light hover:text-brand-gold transition-colors text-sm">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
