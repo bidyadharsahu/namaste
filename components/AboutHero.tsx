@@ -48,7 +48,7 @@ export default function AboutHero({ title, subtitle, ctas, media }: AboutHeroPro
             muted
             playsInline
             poster={media.poster}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_20%] md:object-[center_30%]"
           >
             <source src={media.src} type="video/mp4" />
           </video>

@@ -14,7 +14,7 @@ export default function CTASection() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[center_20%] md:object-[center_30%]"
         >
           <source src="/videos/cta-video.mp4" type="video/mp4" />
         </video>
