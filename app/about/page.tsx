@@ -1,166 +1,163 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
-import { FiAward, FiHeart, FiTrendingUp } from 'react-icons/fi';
+import { FiHeart, FiShield, FiZap, FiUsers } from 'react-icons/fi';
 
 export default function AboutPage() {
   const values = [
     {
-      icon: FiAward,
+      icon: &lt;FiHeart className="w-8 h-8" /&gt;,
       title: 'Fairness',
-      description: 'We ensure drivers earn more and riders always see honest pricing.',
+      description: 'We believe in fair pricing and fair treatment for both riders and drivers.',
     },
     {
-      icon: FiHeart,
+      icon: &lt;FiShield className="w-8 h-8" /&gt;,
       title: 'Trust',
-      description: 'Every ride includes verified drivers and insurance protection.',
+      description: 'Building trust through transparency, safety, and reliable service.',
     },
     {
-      icon: FiTrendingUp,
+      icon: &lt;FiZap className="w-8 h-8" /&gt;,
       title: 'Innovation',
-      description: 'Smart systems, live tracking, route intelligence, and efficient operations.',
+      description: 'Using smart technology to make transportation better for everyone.',
+    },
+    {
+      icon: &lt;FiUsers className="w-8 h-8" /&gt;,
+      title: 'Community',
+      description: 'Creating positive impact for riders, drivers, and communities we serve.',
     },
   ];
 
   return (
-    <main className="pt-24">
+    &lt;main className="min-h-screen bg-white"&gt;
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-brand-black">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-black/50 to-brand-black"></div>
-        </div>
-        
-        <div className="container-custom relative z-10 text-center">
-          <motion.h1
+      &lt;section className="pt-32 pb-20 bg-brand-black"&gt;
+        &lt;div className="container-custom"&gt;
+          &lt;motion.div
+            className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-8xl font-luxury font-bold text-brand-white mb-6"
-          >
-            ABOUT <span className="text-gradient-gold">NAMASTE</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-brand-gray-light max-w-3xl mx-auto"
-          >
-            Built to transform ride-hailing with fairness and transparency
-          </motion.p>
-        </div>
-      </section>
+          &gt;
+            &lt;h1 className="text-5xl md:text-7xl font-bold text-white mb-6"&gt;
+              WHO &lt;span className="text-brand-yellow"&gt;WE ARE&lt;/span&gt;
+            &lt;/h1&gt;
+            &lt;p className="text-xl text-gray-300 leading-relaxed"&gt;
+              A next-generation ride-hailing platform built to be fair, transparent, and driver-first
+            &lt;/p&gt;
+          &lt;/motion.div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 
       {/* Story Section */}
-      <section className="py-32 bg-brand-gray-dark">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
+      &lt;section className="py-20"&gt;
+        &lt;div className="container-custom"&gt;
+          &lt;div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"&gt;
+            &lt;motion.div
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-5xl md:text-6xl font-luxury font-bold text-brand-white mb-8">
-                OUR <span className="text-gradient-gold">STORY</span>
-              </h2>
-              <div className="space-y-6 text-brand-gray-light text-lg leading-relaxed">
-                <p>
-                  We started Namaste to solve real challenges in the transport industry: Drivers losing 40–50% to commissions, riders facing surge pricing, no built-in insurance protection, lack of transparency, and inconsistent ride reliability.
-                </p>
-                <p>
-                  Namaste changes this. We focus on fairness, safety, and technology-driven transparency. Drivers earn more. Riders pay fair rates. Everyone is protected.
-                </p>
-                <p>
-                  Today we operate across major Indian and US cities — and we are just getting started. Our mission is to build a ride-hailing ecosystem where drivers thrive, riders feel safe, and mobility is transparent for all.
-                </p>
-              </div>
-            </motion.div>
+            &gt;
+              &lt;h2 className="text-4xl md:text-5xl font-bold text-brand-black mb-6"&gt;
+                Our Story
+              &lt;/h2&gt;
+              &lt;p className="text-lg text-gray-600 leading-relaxed mb-6"&gt;
+                We started Namaste to solve real challenges in the transport industry: Drivers losing 40–50% to commissions, riders facing surge pricing, and a lack of transparency.
+              &lt;/p&gt;
+              &lt;p className="text-lg text-gray-600 leading-relaxed mb-6"&gt;
+                Our mission is simple: create a ride-hailing platform that's truly fair for everyone — riders, drivers, and communities.
+              &lt;/p&gt;
+              &lt;p className="text-lg text-gray-600 leading-relaxed"&gt;
+                We're building a sustainable future for urban mobility, one ride at a time, with technology that empowers rather than exploits.
+              &lt;/p&gt;
+            &lt;/motion.div&gt;
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
+            &lt;motion.div
+              className="relative h-[400px] rounded-2xl overflow-hidden bg-gray-200"
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative h-[600px] bg-brand-black border border-brand-yellow/20 rounded-3xl overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-brand-yellow rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-brand-black font-luxury text-5xl">N</span>
-                  </div>
-                  <p className="text-brand-gray-light">Company Image</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+            &gt;
+              &lt;div className="absolute inset-0 bg-gradient-to-br from-brand-yellow/20 to-orange-500/20"&gt;&lt;/div&gt;
+              {/* Placeholder for image */}
+              &lt;div className="absolute inset-0 flex items-center justify-center text-gray-400"&gt;
+                &lt;FiUsers className="w-32 h-32" /&gt;
+              &lt;/div&gt;
+            &lt;/motion.div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 
       {/* Values Section */}
-      <section className="py-32 bg-brand-black">
-        <div className="container-custom">
-          <motion.div
+      &lt;section className="py-20 bg-gray-50"&gt;
+        &lt;div className="container-custom"&gt;
+          &lt;motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-6xl font-luxury font-bold text-brand-white mb-6">
-              OUR <span className="text-gradient-gold">VALUES</span>
-            </h2>
-            <p className="text-xl text-brand-gray-light max-w-3xl mx-auto">
-              The principles that guide everything we do
-            </p>
-          </motion.div>
+          &gt;
+            &lt;h2 className="text-4xl md:text-5xl font-bold text-brand-black mb-4"&gt;
+              Our Core Values
+            &lt;/h2&gt;
+            &lt;p className="text-lg text-gray-600 max-w-2xl mx-auto"&gt;
+              These principles guide everything we do
+            &lt;/p&gt;
+          &lt;/motion.div&gt;
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
+          &lt;div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"&gt;
+            {values.map((value, index) =&gt; (
+              &lt;motion.div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="relative p-10 bg-brand-gray-dark border border-brand-yellow/20 hover:border-brand-yellow/60 transition-all duration-500 h-full rounded-3xl">
-                  <div className="w-20 h-20 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                    <value.icon className="w-10 h-10 text-brand-black" />
-                  </div>
-                  <h3 className="text-3xl font-luxury font-bold text-brand-white mb-4">
-                    {value.title}
-                  </h3>
-                  <p className="text-brand-gray-light leading-relaxed text-lg">
-                    {value.description}
-                  </p>
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-yellow via-brand-yellow-light to-brand-yellow-dark w-0 group-hover:w-full transition-all duration-700 rounded-b-3xl"></div>
-                </div>
-              </motion.div>
+              &gt;
+                &lt;div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-brand-yellow mb-6"&gt;
+                  &lt;div className="text-brand-black"&gt;{value.icon}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;h3 className="text-xl font-bold text-brand-black mb-3"&gt;
+                  {value.title}
+                &lt;/h3&gt;
+                &lt;p className="text-gray-600 leading-relaxed"&gt;
+                  {value.description}
+                &lt;/p&gt;
+              &lt;/motion.div&gt;
             ))}
-          </div>
-        </div>
-      </section>
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 
       {/* Mission Section */}
-      <section className="py-32 bg-brand-gray-dark">
-        <div className="container-custom text-center">
-          <motion.div
+      &lt;section className="py-20 bg-brand-black"&gt;
+        &lt;div className="container-custom"&gt;
+          &lt;motion.div
+            className="max-w-4xl mx-auto text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto"
-          >
-            <h2 className="text-5xl md:text-7xl font-luxury font-bold text-brand-white mb-8 leading-tight">
-              OUR <span className="text-gradient-gold">MISSION</span>
-            </h2>
-            <p className="text-2xl md:text-3xl text-brand-gray-light font-light leading-relaxed">
-              To build a ride-hailing ecosystem where drivers thrive, riders feel safe, and mobility is transparent for all.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </main>
+          &gt;
+            &lt;h2 className="text-4xl md:text-5xl font-bold text-white mb-6"&gt;
+              Our Mission
+            &lt;/h2&gt;
+            &lt;p className="text-xl text-gray-300 leading-relaxed mb-8"&gt;
+              To create a ride-hailing platform that's truly fair for everyone — riders, drivers, and communities. We're building a sustainable future for urban mobility, one ride at a time.
+            &lt;/p&gt;
+            &lt;div className="inline-flex items-center gap-4 text-brand-yellow text-lg font-semibold"&gt;
+              &lt;span&gt;Driver-First&lt;/span&gt;
+              &lt;span className="text-gray-600"&gt;•&lt;/span&gt;
+              &lt;span&gt;Rider-Focused&lt;/span&gt;
+              &lt;span className="text-gray-600"&gt;•&lt;/span&gt;
+              &lt;span&gt;Community-Driven&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/motion.div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
   );
 }

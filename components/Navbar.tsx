@@ -19,12 +19,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'HOME' },
-    { href: '/about', label: 'ABOUT' },
-    { href: '/services', label: 'SERVICES' },
-    { href: '/fleet', label: 'FLEET' },
+    { href: '/about', label: 'WHO WE ARE' },
+    { href: '/services', label: 'WHAT WE DO' },
     { href: '/team', label: 'TEAM' },
-    { href: '/newsroom', label: 'NEWSROOM' },
-    { href: '/careers', label: 'CAREERS' },
     { href: '/contact', label: 'CONTACT' },
   ];
 
@@ -34,11 +31,11 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-brand-black/95 backdrop-blur-md border-b border-brand-yellow/20' : 'bg-transparent'
+        isScrolled ? 'bg-brand-black border-b border-brand-yellow/10' : 'bg-brand-black/90'
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img 
@@ -60,8 +57,8 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Link href="/book" className="btn btn-primary text-sm ml-4">
-              BOOK NOW
+            <Link href="/book" className="px-6 py-2.5 bg-brand-yellow text-brand-black font-semibold hover:bg-brand-yellow-light transition-all duration-300 text-sm tracking-wider">
+              TAKE A RIDE
             </Link>
           </div>
 
