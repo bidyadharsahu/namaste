@@ -25,14 +25,14 @@ export default function HomePage() {
     {
       icon: <FiTrendingUp className="w-8 h-8" />,
       title: 'Growing Worldwide',
-      description: 'Now available in 15+ cities and expanding every month.',
+      description: 'Now available in 3+ cities and expanding every month.',
     },
   ];
 
   const stats = [
     { number: '50,000+', label: 'Rides Completed' },
     { number: '99.8%', label: 'Customer Satisfaction' },
-    { number: '15+', label: 'Cities Served' },
+    { number: '3+', label: 'Cities Served' },
     { number: '200+', label: 'Active Drivers' },
   ];
 
@@ -54,7 +54,7 @@ export default function HomePage() {
               Why Choose Namaste
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience a ride hailing platform that puts people first
+              Experience a ride-hailing platform that puts people first
             </p>
           </motion.div>
 

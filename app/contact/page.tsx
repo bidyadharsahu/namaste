@@ -135,8 +135,8 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors"
-                        placeholder="John Doe"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors text-brand-black"
+                        placeholder=""
                       />
                     </div>
 
@@ -151,8 +151,8 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors"
-                        placeholder="john@example.com"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors text-brand-black"
+                        placeholder=""
                       />
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors text-brand-black"
                       placeholder="How can we help?"
                     />
                   </div>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-brand-yellow transition-colors resize-none text-brand-black"
                       placeholder="Tell us more about your inquiry..."
                     ></textarea>
                   </div>

@@ -42,7 +42,7 @@ export default function AboutPage() {
               WHO <span className="text-brand-yellow">WE ARE</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
-              A next-generation ride-hailing platform built to be fair, transparent, and driver-first
+              A next generation ride hailing platform built to be fair, transparent, and driver first
             </p>
           </motion.div>
         </div>
@@ -62,28 +62,25 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                We started Namaste to solve real challenges in the transport industry: Drivers losing 40–50% to commissions, riders facing surge pricing, and a lack of transparency.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Our mission is simple: create a ride-hailing platform that's truly fair for everyone — riders, drivers, and communities.
+                We started with a simple belief: great websites should be both beautiful and functional. Our journey began when we combined our complementary skills to create solutions that truly deliver results for our clients.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We're building a sustainable future for urban mobility, one ride at a time, with technology that empowers rather than exploits.
+                Today, we continue to push boundaries in web development, creating experiences that help our clients stand out in a crowded digital landscape.
               </p>
             </motion.div>
 
             <motion.div
-              className="relative h-[400px] rounded-2xl overflow-hidden bg-gray-200"
+              className="relative h-[400px] rounded-2xl overflow-hidden"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-yellow/20 to-orange-500/20"></div>
-              {/* Placeholder for image */}
-              <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                <FiUsers className="w-32 h-32" />
-              </div>
+              <img 
+                src="https://assets3.thrillist.com/v1/image/2784343/1536x1024/crop;webp=auto;jpeg_quality=60;progressive.jpg" 
+                alt="Our Story" 
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           </div>
         </div>
@@ -146,7 +143,7 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              To create a ride-hailing platform that's truly fair for everyone — riders, drivers, and communities. We're building a sustainable future for urban mobility, one ride at a time.
+              To create a ride hailing platform that's truly fair for everyone riders, drivers, and communities. We're building a sustainable future for urban mobility, one ride at a time.
             </p>
             <div className="inline-flex items-center gap-4 text-brand-yellow text-lg font-semibold">
               <span>Driver-First</span>

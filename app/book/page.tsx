@@ -76,8 +76,8 @@ export default function BookPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
-                      placeholder="John Doe"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
+                      placeholder=""
                     />
                   </div>
 
@@ -91,8 +91,8 @@ export default function BookPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
-                      placeholder="+1 (555) 123-4567"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
+                      placeholder=""
                     />
                   </div>
 
@@ -106,8 +106,8 @@ export default function BookPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
-                      placeholder="john@example.com"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
+                      placeholder=""
                     />
                   </div>
                 </div>
@@ -130,7 +130,7 @@ export default function BookPage() {
                       value={formData.pickupLocation}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
                       placeholder="Enter pickup address"
                     />
                   </div>
@@ -145,7 +145,7 @@ export default function BookPage() {
                       value={formData.dropoffLocation}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
                       placeholder="Enter destination address"
                     />
                   </div>
@@ -234,7 +234,7 @@ export default function BookPage() {
                       value={formData.specialRequests}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none resize-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none resize-none"
                       placeholder="Any special requirements or preferences..."
                     />
                   </div>
