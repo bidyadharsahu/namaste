@@ -12,7 +12,7 @@ export default function HeroSection() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
@@ -43,26 +43,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Namaste is a next-generation ride-hailing platform built to be fair,
+            Namaste is a next generation ride hailing platform built to be fair,
             <br />
-            transparent, and driver-first
+            transparent, and driver first
           </motion.p>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <motion.div
-            className="w-6 h-10 border-2 border-brand-yellow/40 rounded-full flex items-start justify-center p-1.5"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <div className="w-1 h-2 bg-brand-yellow rounded-full"></div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

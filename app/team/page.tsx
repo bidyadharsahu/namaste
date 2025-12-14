@@ -6,24 +6,29 @@ import { FiMail } from 'react-icons/fi';
 export default function TeamPage() {
   const leadership = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Hariswar',
       title: 'Founder & CEO',
-      bio: 'With over 15 years in tech and transportation, Rajesh founded Namaste to bring fairness and transparency to ride-hailing.',
+      bio: 'With over 15 years in tech and transportation, Hariswar founded Namaste to bring fairness and transparency to ride-hailing.',
     },
     {
-      name: 'Priya Sharma',
+      name: 'Prasad',
       title: 'Chief Operating Officer',
-      bio: 'Priya ensures operational excellence across all cities, maintaining our commitment to driver satisfaction and rider safety.',
+      bio: 'Prasad ensures operational excellence across all cities, maintaining our commitment to driver satisfaction and rider safety.',
     },
     {
-      name: 'Michael Chen',
+      name: 'Bidyadhar',
       title: 'Head of Technology',
-      bio: 'Michael leads our engineering team, building smart systems that make rides safer, faster, and more efficient.',
+      bio: 'Bidyadhar leads our engineering team, building smart systems that make rides safer, faster, and more efficient.',
     },
     {
-      name: 'Sarah Williams',
+      name: 'Rajesh',
       title: 'Director of Customer Experience',
-      bio: 'Sarah crafts exceptional experiences for both riders and drivers, ensuring everyone feels valued.',
+      bio: 'Rajesh crafts exceptional experiences for both riders and drivers, ensuring everyone feels valued.',
+    },
+    {
+      name: 'Abinash',
+      title: 'Marketing Director',
+      bio: 'Abinash drives our marketing strategy and brand presence, connecting Namaste with communities across India.',
     },
   ];
 
@@ -66,7 +71,7 @@ export default function TeamPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {leadership.map((member, index) => (
               <motion.div
                 key={index}

@@ -35,7 +35,7 @@ export default function CTASection() {
               <span className="text-gradient-gold">WITH CONFIDENCE?</span>
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-light mb-12 max-w-2xl font-light leading-relaxed">
-              Experience transparent pricing, insured rides, and friendly service — all in one app.
+              Experience transparent pricing, insured rides, and friendly service all in one app.
             </p>
 
             <motion.div

@@ -1,9 +1,54 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+// Create a singleton instance
+let supabaseInstance: SupabaseClient | null = null;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Lazy initialization function
+export function getSupabase(): SupabaseClient | null {
+  // Only initialize if we're in the browser and have env vars
+  if (typeof window !== 'undefined') {
+    if (!supabaseInstance && process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      supabaseInstance = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+      );
+    }
+  } else if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    // Server-side initialization
+    if (!supabaseInstance) {
+      try {
+        supabaseInstance = createClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL,
+          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+        );
+      } catch (error) {
+        console.warn('Failed to initialize Supabase client:', error);
+        return null;
+      }
+    }
+  }
+  
+  return supabaseInstance;
+}
+
+// Export the original supabase client for backward compatibility
+// but handle the case where env vars are missing
+let cachedSupabase: SupabaseClient | null = null;
+
+try {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  
+  if (supabaseUrl && supabaseAnonKey) {
+    cachedSupabase = createClient(supabaseUrl, supabaseAnonKey);
+  } else {
+    console.warn('Supabase environment variables are not set. API routes will use mock data.');
+  }
+} catch (error) {
+  console.warn('Error initializing Supabase client:', error);
+}
+
+export const supabase = cachedSupabase;
 
 // Database types
 export interface TeamMember {

@@ -67,23 +67,29 @@ She is passionate about storytelling and building brands that resonate with loca
 
 export async function GET() {
   try {
-    // Try to fetch from Supabase first
-    const { data, error } = await supabase
-      .from('team')
-      .select('*')
-      .order('order_index', { ascending: true });
+    // Try to fetch from Supabase first, but only if it's initialized
+    if (supabase) {
+      const { data, error } = await supabase
+        .from('team')
+        .select('*')
+        .order('order_index', { ascending: true });
 
-    if (error) {
-      console.log('Supabase error, using mock data:', error.message);
+      if (error) {
+        console.log('Supabase error, using mock data:', error.message);
+        return NextResponse.json(mockTeamMembers);
+      }
+
+      // If no data in database, return mock data
+      if (!data || data.length === 0) {
+        return NextResponse.json(mockTeamMembers);
+      }
+
+      return NextResponse.json(data);
+    } else {
+      // Supabase not initialized, use mock data
+      console.log('Supabase not initialized, using mock data');
       return NextResponse.json(mockTeamMembers);
     }
-
-    // If no data in database, return mock data
-    if (!data || data.length === 0) {
-      return NextResponse.json(mockTeamMembers);
-    }
-
-    return NextResponse.json(data);
   } catch (error) {
     console.error('Error fetching team:', error);
     // Return mock data on any error

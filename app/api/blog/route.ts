@@ -78,15 +78,45 @@ export async function GET(request: NextRequest) {
     const page = parseInt(searchParams.get('page') || '1');
     const offset = (page - 1) * limit;
 
-    // Try to fetch from Supabase first
-    const { data, error, count } = await supabase
-      .from('blog')
-      .select('*', { count: 'exact' })
-      .order('date', { ascending: false })
-      .range(offset, offset + limit - 1);
+    // Try to fetch from Supabase first, but only if it's initialized
+    if (supabase) {
+      const { data, error, count } = await supabase
+        .from('blog')
+        .select('*', { count: 'exact' })
+        .order('date', { ascending: false })
+        .range(offset, offset + limit - 1);
 
-    if (error) {
-      console.log('Supabase error, using mock data:', error.message);
+      if (error) {
+        console.log('Supabase error, using mock data:', error.message);
+        const paginatedMock = mockBlogPosts.slice(offset, offset + limit);
+        return NextResponse.json({
+          data: paginatedMock,
+          total: mockBlogPosts.length,
+          page,
+          limit,
+        });
+      }
+
+      // If no data in database, return mock data
+      if (!data || data.length === 0) {
+        const paginatedMock = mockBlogPosts.slice(offset, offset + limit);
+        return NextResponse.json({
+          data: paginatedMock,
+          total: mockBlogPosts.length,
+          page,
+          limit,
+        });
+      }
+
+      return NextResponse.json({
+        data,
+        total: count || 0,
+        page,
+        limit,
+      });
+    } else {
+      // Supabase not initialized, use mock data
+      console.log('Supabase not initialized, using mock data');
       const paginatedMock = mockBlogPosts.slice(offset, offset + limit);
       return NextResponse.json({
         data: paginatedMock,
@@ -95,24 +125,6 @@ export async function GET(request: NextRequest) {
         limit,
       });
     }
-
-    // If no data in database, return mock data
-    if (!data || data.length === 0) {
-      const paginatedMock = mockBlogPosts.slice(offset, offset + limit);
-      return NextResponse.json({
-        data: paginatedMock,
-        total: mockBlogPosts.length,
-        page,
-        limit,
-      });
-    }
-
-    return NextResponse.json({
-      data,
-      total: count || 0,
-      page,
-      limit,
-    });
   } catch (error) {
     console.error('Error fetching blog:', error);
     // Return mock data on any error

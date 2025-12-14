@@ -39,9 +39,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img 
-              src="/logo.png" 
-              alt="Namaste Rides" 
-              className="h-16 w-auto transition-all duration-300 group-hover:scale-105"
+              src="https://avatars.githubusercontent.com/u/243820471?v=4" 
+              alt="Namaste Rides Logo" 
+              className="h-48 w-auto rounded"
             />
           </Link>
 
@@ -57,9 +57,9 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Link href="/book" className="px-6 py-2.5 bg-brand-yellow text-brand-black font-semibold hover:bg-brand-yellow-light transition-all duration-300 text-sm tracking-wider">
+            <a href="https://namasterides.vercel.app/home" className="px-6 py-2.5 bg-brand-yellow text-brand-black font-semibold hover:bg-brand-yellow-light transition-all duration-300 text-sm tracking-wider">
               TAKE A RIDE
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,9 +100,9 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <div className="px-6 pt-4">
-                  <Link href="/book" className="btn btn-primary w-full text-center block text-sm">
-                    BOOK NOW
-                  </Link>
+                  <a href="https://namasterides.vercel.app/home" className="btn btn-primary w-full text-center block text-sm">
+                    TAKE A RIDE
+                  </a>
                 </div>
               </div>
             </motion.div>

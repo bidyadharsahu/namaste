@@ -61,23 +61,29 @@ const mockJobs = [
 
 export async function GET() {
   try {
-    // Try to fetch from Supabase first
-    const { data, error } = await supabase
-      .from('jobs')
-      .select('*')
-      .order('created_at', { ascending: false });
+    // Try to fetch from Supabase first, but only if it's initialized
+    if (supabase) {
+      const { data, error } = await supabase
+        .from('jobs')
+        .select('*')
+        .order('created_at', { ascending: false });
 
-    if (error) {
-      console.log('Supabase error, using mock data:', error.message);
+      if (error) {
+        console.log('Supabase error, using mock data:', error.message);
+        return NextResponse.json(mockJobs);
+      }
+
+      // If no data in database, return mock data
+      if (!data || data.length === 0) {
+        return NextResponse.json(mockJobs);
+      }
+
+      return NextResponse.json(data);
+    } else {
+      // Supabase not initialized, use mock data
+      console.log('Supabase not initialized, using mock data');
       return NextResponse.json(mockJobs);
     }
-
-    // If no data in database, return mock data
-    if (!data || data.length === 0) {
-      return NextResponse.json(mockJobs);
-    }
-
-    return NextResponse.json(data);
   } catch (error) {
     console.error('Error fetching jobs:', error);
     // Return mock data on any error
