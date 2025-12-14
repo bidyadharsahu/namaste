@@ -91,18 +91,18 @@ export default function FleetPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative bg-brand-black border border-brand-gold/20 hover:border-brand-gold/60 transition-all duration-500 overflow-hidden h-full flex flex-col">
+                <div className="relative bg-brand-black border border-brand-yellow/20 hover:border-brand-yellow/60 transition-all duration-500 overflow-hidden h-full flex flex-col">
                   {/* Image Placeholder */}
                   <div className="relative h-80 bg-brand-gray-dark flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent z-10"></div>
                     <div className="text-center z-0">
-                      <div className="w-20 h-20 bg-brand-red flex items-center justify-center mx-auto mb-4">
+                      <div className="w-20 h-20 bg-brand-yellow flex items-center justify-center mx-auto mb-4">
                         <span className="text-white font-luxury text-4xl">N</span>
                       </div>
                       <p className="text-brand-gray-light text-sm">{vehicle.name}</p>
                     </div>
                     {/* Category Badge */}
-                    <div className="absolute top-6 right-6 bg-brand-red px-4 py-2 z-20">
+                    <div className="absolute top-6 right-6 bg-brand-yellow px-4 py-2 z-20">
                       <span className="text-white text-xs font-bold tracking-wider">{vehicle.category}</span>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ export default function FleetPage() {
                     </h3>
                     
                     <div className="flex items-center gap-2 mb-6">
-                      <FiUsers className="text-brand-gold" />
+                      <FiUsers className="text-brand-yellow" />
                       <span className="text-brand-gray-light text-sm">{vehicle.capacity}</span>
                     </div>
 
@@ -126,7 +126,7 @@ export default function FleetPage() {
                     <div className="grid grid-cols-2 gap-3 mb-6">
                       {vehicle.features.map((feature) => (
                         <div key={feature} className="flex items-center text-brand-gray-light text-sm">
-                          <div className="w-1.5 h-1.5 bg-brand-gold mr-2"></div>
+                          <div className="w-1.5 h-1.5 bg-brand-yellow mr-2"></div>
                           {feature}
                         </div>
                       ))}
@@ -134,7 +134,7 @@ export default function FleetPage() {
 
                     <Link 
                       href="/book" 
-                      className="text-brand-gold hover:text-brand-yellow transition-colors font-medium tracking-wider text-sm flex items-center group"
+                      className="text-brand-yellow hover:text-brand-yellow transition-colors font-medium tracking-wider text-sm flex items-center group"
                     >
                       BOOK THIS VEHICLE
                       <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
@@ -142,7 +142,7 @@ export default function FleetPage() {
                   </div>
 
                   {/* Decorative Line */}
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-red via-brand-gold to-brand-yellow w-0 group-hover:w-full transition-all duration-700"></div>
+                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-yellow via-brand-yellow to-brand-yellow w-0 group-hover:w-full transition-all duration-700"></div>
                 </div>
               </motion.div>
             ))}
@@ -191,7 +191,7 @@ export default function FleetPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-brand-red to-brand-red-dark flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-10 h-10 text-brand-white" />
                 </div>
                 <h3 className="text-2xl font-luxury font-bold text-brand-white mb-4">

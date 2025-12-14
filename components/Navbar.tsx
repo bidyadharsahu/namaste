@@ -34,19 +34,18 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-brand-black/95 backdrop-blur-md border-b border-brand-gold/20' : 'bg-transparent'
+        isScrolled ? 'bg-brand-black/95 backdrop-blur-md border-b border-brand-yellow/20' : 'bg-transparent'
       }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-14 h-14 bg-brand-red flex items-center justify-center transition-all duration-300 group-hover:bg-brand-red-light">
-              <span className="text-white font-luxury text-2xl">N</span>
-            </div>
-            <span className="text-2xl font-luxury font-bold text-brand-white tracking-wider">
-              NAMASTE<span className="text-brand-red">.</span>
-            </span>
+          <Link href="/" className="flex items-center group">
+            <img 
+              src="/logo.png" 
+              alt="Namaste Rides" 
+              className="h-16 w-auto transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,10 +54,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium tracking-widest text-brand-white hover:text-brand-red transition-colors duration-300 relative group"
+                className="text-sm font-medium tracking-widest text-brand-white hover:text-brand-yellow transition-colors duration-300 relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             <Link href="/book" className="btn btn-primary text-sm ml-4">
@@ -69,7 +68,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-brand-white hover:text-brand-red transition-colors"
+            className="lg:hidden p-2 text-brand-white hover:text-brand-yellow transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
@@ -84,7 +83,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-brand-gray-dark border-t border-brand-gold/20"
+              className="lg:hidden bg-brand-gray-dark border-t border-brand-yellow/20"
             >
               <div className="py-6 space-y-4">
                 {navLinks.map((link, index) => (
@@ -96,7 +95,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className="block px-6 py-3 text-sm font-medium tracking-widest text-brand-white hover:text-brand-red hover:bg-brand-gray-light transition-all"
+                      className="block px-6 py-3 text-sm font-medium tracking-widest text-brand-white hover:text-brand-yellow hover:bg-brand-gray-light transition-all"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.label}

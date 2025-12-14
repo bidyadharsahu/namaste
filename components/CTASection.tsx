@@ -30,24 +30,13 @@ export default function CTASection() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-5xl md:text-7xl font-luxury font-bold text-brand-white mb-6 leading-tight">
-              READY TO EXPERIENCE
+              READY TO RIDE
               <br />
-              <span className="text-gradient-gold">LUXURY REDEFINED?</span>
+              <span className="text-gradient-gold">WITH CONFIDENCE?</span>
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-light mb-12 max-w-2xl font-light leading-relaxed">
-              Book your premium ride today and discover why discerning clients choose Namaste Rides for their most important journeys.
+              Experience transparent pricing, insured rides, and friendly service — all in one app.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Link href="/book" className="btn btn-primary group text-lg px-10 py-5">
-                BOOK NOW
-                <FiArrowRight className="ml-3 group-hover:translate-x-2 transition-transform" size={24} />
-              </Link>
-              <Link href="/contact" className="btn btn-secondary group text-lg px-10 py-5">
-                <FiPhone className="mr-3" size={24} />
-                CONTACT US
-              </Link>
-            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -57,11 +46,11 @@ export default function CTASection() {
               className="mt-12 flex items-center gap-12 flex-wrap"
             >
               <div>
-                <p className="text-brand-gold text-sm uppercase tracking-widest mb-2">Available 24/7</p>
+                <p className="text-brand-yellow text-sm uppercase tracking-widest mb-2">Available 24/7</p>
                 <p className="text-brand-white text-2xl font-bold">+1 (555) 123-4567</p>
               </div>
               <div>
-                <p className="text-brand-gold text-sm uppercase tracking-widest mb-2">Email Us</p>
+                <p className="text-brand-yellow text-sm uppercase tracking-widest mb-2">Email Us</p>
                 <p className="text-brand-white text-2xl font-bold">namasterides26@gmail.com</p>
               </div>
             </motion.div>

@@ -36,7 +36,7 @@ export default function HeroSection() {
           >
             REDEFINING
             <br />
-            <span className="text-gradient-gold">LUXURY RIDES</span>
+            <span className="text-gradient-gold">THE WAY YOU RIDE</span>
           </motion.h1>
 
           <motion.p
@@ -45,26 +45,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Experience the pinnacle of premium transportation with Namaste Rides.
+            Namaste is a next-generation ride-hailing platform built to be fair, transparent, and driver-first.
             <br />
-            Where elegance meets excellence.
+            We make daily travel simple, safe, and affordable for everyone.
           </motion.p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-          >
-            <Link href="/book" className="btn btn-primary group">
-              BOOK YOUR RIDE
-              <FiArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
-            </Link>
-            <Link href="/fleet" className="btn btn-secondary group">
-              EXPLORE FLEET
-              <FiArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}
@@ -74,16 +58,13 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
         >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-brand-gold text-xs tracking-widest uppercase">Scroll to explore</span>
-            <motion.div
-              className="w-6 h-10 border-2 border-brand-gold rounded-full flex items-start justify-center p-2"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <div className="w-1 h-2 bg-brand-gold rounded-full"></div>
-            </motion.div>
-          </div>
+          <motion.div
+            className="w-8 h-12 border-2 border-brand-yellow/40 rounded-full flex items-start justify-center p-2"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <div className="w-1.5 h-2.5 bg-brand-yellow rounded-full"></div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

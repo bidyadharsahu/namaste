@@ -8,39 +8,39 @@ export default function ServicesPage() {
   const services = [
     {
       icon: FiBriefcase,
-      title: 'Corporate Transportation',
-      description: 'Premium chauffeur services for executives and business professionals. Punctual, discreet, and professional.',
-      features: ['Airport transfers', 'Meeting transportation', 'Multi-day bookings', 'Corporate accounts'],
+      title: 'Daily Rides',
+      description: 'Convenient and affordable rides for everyday travel.',
+      features: ['Quick booking', 'Fair pricing', 'Verified drivers', 'GPS tracking'],
     },
     {
       icon: FiStar,
-      title: 'Special Events',
-      description: 'Make your special occasions unforgettable with our luxury fleet and exceptional service.',
-      features: ['Weddings', 'Galas & Premieres', 'Anniversary celebrations', 'Birthday parties'],
+      title: 'Airport Transfers',
+      description: 'Timely, stress-free rides to and from airports.',
+      features: ['Flight tracking', 'Meet & greet', 'Luggage assistance', 'On-time guarantee'],
     },
     {
       icon: FiMapPin,
-      title: 'Airport Services',
-      description: 'Stress-free airport transfers with flight monitoring and meet-and-greet service.',
-      features: ['Flight tracking', 'Curbside pickup', 'Luggage assistance', 'VIP lounge access'],
+      title: 'Office & Corporate Commutes',
+      description: 'Reliable transport solutions tailored for employees and companies.',
+      features: ['Corporate accounts', 'Monthly billing', 'Route optimization', 'Dedicated support'],
     },
     {
       icon: FiCalendar,
-      title: 'Long-Term Rentals',
-      description: 'Flexible long-term vehicle rental solutions for extended stays and projects.',
-      features: ['Weekly rates', 'Monthly packages', 'Dedicated chauffeur', 'Customized itineraries'],
+      title: 'Intercity Travel',
+      description: 'Comfortable long-distance rides at predictable, fair pricing.',
+      features: ['Fixed pricing', 'Comfortable vehicles', 'Experienced drivers', 'Flexible stops'],
     },
     {
       icon: FiUsers,
-      title: 'Group Transportation',
-      description: 'Coordinated transportation for groups of any size with our luxury vehicles.',
-      features: ['Team outings', 'Conference transport', 'Group tours', 'Multiple vehicles'],
+      title: 'Shared Rides',
+      description: 'Cost-effective trips for riders traveling in the same direction. (Coming Soon)',
+      features: ['Save money', 'Eco-friendly', 'Meet new people', 'Smart matching'],
     },
     {
       icon: FiGlobe,
-      title: 'City Tours',
-      description: 'Experience the city in style with our curated luxury tour packages.',
-      features: ['Custom routes', 'Local expertise', 'Flexible timing', 'Premium comfort'],
+      title: 'Custom Solutions',
+      description: 'Tailored transportation packages for your specific needs.',
+      features: ['Event transport', 'Group bookings', 'Special occasions', 'Custom routing'],
     },
   ];
 
@@ -85,9 +85,9 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative p-8 bg-brand-black border border-brand-gold/20 hover:border-brand-gold/60 transition-all duration-500 h-full flex flex-col">
+                <div className="relative p-8 bg-brand-black border border-brand-yellow/20 hover:border-brand-yellow/60 transition-all duration-500 h-full flex flex-col">
                   {/* Icon */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-red to-brand-red-dark flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                     <service.icon className="w-8 h-8 text-brand-white" />
                   </div>
 
@@ -103,14 +103,14 @@ export default function ServicesPage() {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center text-brand-gray-light text-sm">
-                        <div className="w-1.5 h-1.5 bg-brand-gold mr-3"></div>
+                        <div className="w-1.5 h-1.5 bg-brand-yellow mr-3"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
 
                   {/* Decorative Line */}
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-red via-brand-gold to-brand-yellow w-0 group-hover:w-full transition-all duration-700"></div>
+                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-yellow via-brand-yellow to-brand-yellow w-0 group-hover:w-full transition-all duration-700"></div>
                 </div>
               </motion.div>
             ))}

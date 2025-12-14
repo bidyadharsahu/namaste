@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: 50000, suffix: '+', label: 'Premium Rides Completed' },
-  { value: 99.8, suffix: '%', label: 'Customer Satisfaction' },
-  { value: 15, suffix: '+', label: 'Cities Worldwide' },
-  { value: 200, suffix: '+', label: 'Luxury Vehicles' },
+  { value: 50000, suffix: '+', label: 'Rides Completed' },
+  { value: 99.8, suffix: '%', label: 'Rider Satisfaction' },
+  { value: 15, suffix: '+', label: 'Cities Active' },
+  { value: 200, suffix: '+', label: 'Driver Partners' },
 ];
 
 function CountUpAnimation({ end, suffix, duration = 2000 }: { end: number; suffix: string; duration?: number }) {
@@ -88,7 +88,7 @@ export default function StatsSection() {
             EXCELLENCE IN <span className="text-gradient-gold">NUMBERS</span>
           </h2>
           <p className="text-xl text-brand-gray-light max-w-3xl mx-auto">
-            Our commitment to luxury and service excellence speaks through our achievements.
+            Our progress reflects our commitment to quality and fairness.
           </p>
         </motion.div>
 

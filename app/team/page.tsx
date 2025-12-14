@@ -87,11 +87,11 @@ export default function TeamPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative bg-brand-black border border-brand-gold/20 hover:border-brand-gold/60 transition-all duration-500 overflow-hidden">
+                <div className="relative bg-brand-black border border-brand-yellow/20 hover:border-brand-yellow/60 transition-all duration-500 overflow-hidden">
                   {/* Image Placeholder */}
                   <div className="relative h-96 bg-brand-gray-dark flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-32 h-32 bg-gradient-to-br from-brand-red to-brand-red-dark rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-32 h-32 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-white font-luxury text-5xl">
                           {member.name.charAt(0)}
                         </span>
@@ -104,7 +104,7 @@ export default function TeamPage() {
                     <h3 className="text-3xl font-luxury font-bold text-brand-white mb-2">
                       {member.name}
                     </h3>
-                    <p className="text-brand-gold text-sm uppercase tracking-widest mb-6">
+                    <p className="text-brand-yellow text-sm uppercase tracking-widest mb-6">
                       {member.title}
                     </p>
                     <p className="text-brand-gray-light mb-6 leading-relaxed">
@@ -115,14 +115,14 @@ export default function TeamPage() {
                     <div className="flex items-center gap-4">
                       <a 
                         href={`mailto:${member.email}`}
-                        className="flex items-center gap-2 text-brand-gray-light hover:text-brand-gold transition-colors"
+                        className="flex items-center gap-2 text-brand-gray-light hover:text-brand-yellow transition-colors"
                       >
                         <FiMail size={18} />
                         <span className="text-sm">Contact</span>
                       </a>
                       <a 
                         href="#"
-                        className="flex items-center gap-2 text-brand-gray-light hover:text-brand-gold transition-colors"
+                        className="flex items-center gap-2 text-brand-gray-light hover:text-brand-yellow transition-colors"
                       >
                         <FiLinkedin size={18} />
                         <span className="text-sm">LinkedIn</span>
@@ -131,7 +131,7 @@ export default function TeamPage() {
                   </div>
 
                   {/* Decorative Line */}
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-red via-brand-gold to-brand-yellow w-0 group-hover:w-full transition-all duration-700"></div>
+                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-yellow via-brand-yellow to-brand-yellow w-0 group-hover:w-full transition-all duration-700"></div>
                 </div>
               </motion.div>
             ))}
@@ -184,7 +184,7 @@ export default function TeamPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-center gap-6 p-6 bg-brand-gray-dark border-l-4 border-brand-gold"
+                  className="flex items-center gap-6 p-6 bg-brand-gray-dark border-l-4 border-brand-yellow"
                 >
                   <div className="text-5xl font-luxury font-bold text-gradient-gold min-w-[120px]">
                     {item.stat}

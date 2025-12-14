@@ -60,7 +60,7 @@ export default function BookPage() {
           >
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Personal Information */}
-              <div className="p-10 bg-brand-black border border-brand-gold/20">
+              <div className="p-10 bg-brand-black border border-brand-yellow/20">
                 <h2 className="text-3xl font-luxury font-bold text-brand-white mb-8">
                   PERSONAL <span className="text-gradient-gold">INFORMATION</span>
                 </h2>
@@ -76,7 +76,7 @@ export default function BookPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                       placeholder="John Doe"
                     />
                   </div>
@@ -91,7 +91,7 @@ export default function BookPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -106,7 +106,7 @@ export default function BookPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -114,7 +114,7 @@ export default function BookPage() {
               </div>
 
               {/* Journey Details */}
-              <div className="p-10 bg-brand-black border border-brand-gold/20">
+              <div className="p-10 bg-brand-black border border-brand-yellow/20">
                 <h2 className="text-3xl font-luxury font-bold text-brand-white mb-8">
                   JOURNEY <span className="text-gradient-gold">DETAILS</span>
                 </h2>
@@ -130,7 +130,7 @@ export default function BookPage() {
                       value={formData.pickupLocation}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                       placeholder="Enter pickup address"
                     />
                   </div>
@@ -145,7 +145,7 @@ export default function BookPage() {
                       value={formData.dropoffLocation}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                       placeholder="Enter destination address"
                     />
                   </div>
@@ -160,7 +160,7 @@ export default function BookPage() {
                       value={formData.date}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
                     />
                   </div>
 
@@ -174,14 +174,14 @@ export default function BookPage() {
                       value={formData.time}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Vehicle Selection */}
-              <div className="p-10 bg-brand-black border border-brand-gold/20">
+              <div className="p-10 bg-brand-black border border-brand-yellow/20">
                 <h2 className="text-3xl font-luxury font-bold text-brand-white mb-8">
                   VEHICLE <span className="text-gradient-gold">SELECTION</span>
                 </h2>
@@ -196,7 +196,7 @@ export default function BookPage() {
                       value={formData.vehicle}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
                     >
                       <option value="">Select a vehicle</option>
                       <option value="mercedes-s-class">Mercedes-Benz S-Class</option>
@@ -217,7 +217,7 @@ export default function BookPage() {
                       value={formData.passengers}
                       onChange={handleChange}
                       required
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white transition-colors outline-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
                     >
                       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => (
                         <option key={num} value={num}>{num} {num === 1 ? 'Passenger' : 'Passengers'}</option>
@@ -234,7 +234,7 @@ export default function BookPage() {
                       value={formData.specialRequests}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full bg-brand-gray-dark border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none resize-none"
+                      className="w-full bg-brand-gray-dark border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none resize-none"
                       placeholder="Any special requirements or preferences..."
                     />
                   </div>

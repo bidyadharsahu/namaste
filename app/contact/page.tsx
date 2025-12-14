@@ -104,7 +104,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-brand-black border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                    className="w-full bg-brand-black border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                     placeholder="John Doe"
                   />
                 </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-brand-black border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                    className="w-full bg-brand-black border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full bg-brand-black border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
+                    className="w-full bg-brand-black border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-brand-black border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white transition-colors outline-none"
+                    className="w-full bg-brand-black border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white transition-colors outline-none"
                   >
                     <option value="">Select a service</option>
                     <option value="corporate">Corporate Transportation</option>
@@ -172,7 +172,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full bg-brand-black border border-brand-gold/20 focus:border-brand-gold px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none resize-none"
+                    className="w-full bg-brand-black border border-brand-yellow/20 focus:border-brand-yellow px-6 py-4 text-brand-white placeholder-brand-gray-light transition-colors outline-none resize-none"
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
@@ -209,9 +209,9 @@ export default function ContactPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex gap-6 p-6 bg-brand-black border border-brand-gold/20 hover:border-brand-gold/60 transition-all duration-500 group"
+                    className="flex gap-6 p-6 bg-brand-black border border-brand-yellow/20 hover:border-brand-yellow/60 transition-all duration-500 group"
                   >
-                    <div className="w-14 h-14 bg-gradient-to-br from-brand-red to-brand-red-dark flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-14 h-14 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
                       <info.icon className="w-7 h-7 text-brand-white" />
                     </div>
                     <div>
@@ -229,7 +229,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map Placeholder */}
-              <div className="h-80 bg-brand-black border border-brand-gold/20 flex items-center justify-center mt-8">
+              <div className="h-80 bg-brand-black border border-brand-yellow/20 flex items-center justify-center mt-8">
                 <p className="text-brand-gray-light">Interactive Map</p>
               </div>
             </motion.div>
@@ -277,7 +277,7 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-8 bg-brand-gray-dark border border-brand-gold/20 hover:border-brand-gold/60 transition-all duration-500"
+                className="p-8 bg-brand-gray-dark border border-brand-yellow/20 hover:border-brand-yellow/60 transition-all duration-500"
               >
                 <h3 className="text-2xl font-luxury font-bold text-brand-white mb-4">
                   {faq.question}

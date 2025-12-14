@@ -2,24 +2,23 @@
 
 import { motion } from 'framer-motion';
 import { FiAward, FiHeart, FiTrendingUp } from 'react-icons/fi';
-import Image from 'next/image';
 
 export default function AboutPage() {
   const values = [
     {
       icon: FiAward,
-      title: 'Excellence',
-      description: 'We strive for perfection in every aspect of our service, from vehicle maintenance to customer care.',
+      title: 'Fairness',
+      description: 'We ensure drivers earn more and riders always see honest pricing.',
     },
     {
       icon: FiHeart,
-      title: 'Integrity',
-      description: 'Trust and transparency form the foundation of every relationship we build with our clients.',
+      title: 'Trust',
+      description: 'Every ride includes verified drivers and insurance protection.',
     },
     {
       icon: FiTrendingUp,
       title: 'Innovation',
-      description: 'We continuously evolve to deliver cutting-edge luxury transportation experiences.',
+      description: 'Smart systems, live tracking, route intelligence, and efficient operations.',
     },
   ];
 
@@ -46,7 +45,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-brand-gray-light max-w-3xl mx-auto"
           >
-            Redefining luxury transportation with unparalleled elegance and service
+            Built to transform ride-hailing with fairness and transparency
           </motion.p>
         </div>
       </section>
@@ -66,13 +65,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-brand-gray-light text-lg leading-relaxed">
                 <p>
-                  Founded with a vision to transform luxury transportation, Namaste Rides has become synonymous with elegance, reliability, and exceptional service. Our journey began with a simple belief: every ride should be an experience to remember.
+                  We started Namaste to solve real challenges in the transport industry: Drivers losing 40–50% to commissions, riders facing surge pricing, no built-in insurance protection, lack of transparency, and inconsistent ride reliability.
                 </p>
                 <p>
-                  Today, we serve discerning clients across major cities worldwide, offering a fleet of meticulously maintained luxury vehicles and a team of professional chauffeurs dedicated to exceeding expectations.
+                  Namaste changes this. We focus on fairness, safety, and technology-driven transparency. Drivers earn more. Riders pay fair rates. Everyone is protected.
                 </p>
                 <p>
-                  From corporate executives to special occasions, we understand that our clients demand nothing but the best. That's why we've built our reputation on three pillars: uncompromising quality, personalized service, and absolute discretion.
+                  Today we operate across major Indian and US cities — and we are just getting started. Our mission is to build a ride-hailing ecosystem where drivers thrive, riders feel safe, and mobility is transparent for all.
                 </p>
               </div>
             </motion.div>
@@ -82,15 +81,14 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative h-[600px] bg-brand-black border border-brand-gold/20"
+              className="relative h-[600px] bg-brand-black border border-brand-yellow/20 rounded-3xl overflow-hidden"
             >
-              {/* Placeholder for image */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-brand-red flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-luxury text-5xl">N</span>
+                  <div className="w-24 h-24 bg-brand-yellow rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-brand-black font-luxury text-5xl">N</span>
                   </div>
-                  <p className="text-brand-gray-light">Luxury Vehicle Image</p>
+                  <p className="text-brand-gray-light">Company Image</p>
                 </div>
               </div>
             </motion.div>
@@ -126,9 +124,9 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative p-10 bg-brand-gray-dark border border-brand-gold/20 hover:border-brand-gold/60 transition-all duration-500 h-full">
-                  <div className="w-20 h-20 bg-gradient-to-br from-brand-red to-brand-red-dark flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                    <value.icon className="w-10 h-10 text-brand-white" />
+                <div className="relative p-10 bg-brand-gray-dark border border-brand-yellow/20 hover:border-brand-yellow/60 transition-all duration-500 h-full rounded-3xl">
+                  <div className="w-20 h-20 bg-gradient-to-br from-brand-yellow to-brand-yellow-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                    <value.icon className="w-10 h-10 text-brand-black" />
                   </div>
                   <h3 className="text-3xl font-luxury font-bold text-brand-white mb-4">
                     {value.title}
@@ -136,7 +134,7 @@ export default function AboutPage() {
                   <p className="text-brand-gray-light leading-relaxed text-lg">
                     {value.description}
                   </p>
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-red via-brand-gold to-brand-yellow w-0 group-hover:w-full transition-all duration-700"></div>
+                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-yellow via-brand-yellow-light to-brand-yellow-dark w-0 group-hover:w-full transition-all duration-700 rounded-b-3xl"></div>
                 </div>
               </motion.div>
             ))}
@@ -158,7 +156,7 @@ export default function AboutPage() {
               OUR <span className="text-gradient-gold">MISSION</span>
             </h2>
             <p className="text-2xl md:text-3xl text-brand-gray-light font-light leading-relaxed">
-              To provide unparalleled luxury transportation experiences that exceed expectations, combining world-class service with the finest vehicles to create memorable journeys for our distinguished clientele.
+              To build a ride-hailing ecosystem where drivers thrive, riders feel safe, and mobility is transparent for all.
             </p>
           </motion.div>
         </div>

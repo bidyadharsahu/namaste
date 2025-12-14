@@ -32,11 +32,11 @@
   }
 
   .btn-primary {
-    @apply bg-brand-red text-white hover:bg-brand-red-dark focus:ring-4 focus:ring-brand-red/30;
+    @apply bg-brand-yellow text-brand-black hover:bg-brand-yellow-light focus:ring-4 focus:ring-brand-yellow/30;
   }
 
   .btn-secondary {
-    @apply bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black focus:ring-brand-gold/30;
+    @apply bg-transparent border-2 border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-brand-black focus:ring-brand-yellow/30;
   }
 
   .section-padding {
@@ -52,7 +52,7 @@
   }
 
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-brand-yellow via-brand-gold to-brand-yellow-dark bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-yellow via-brand-yellow-light to-brand-yellow-dark bg-clip-text text-transparent;
   }
 }
 
