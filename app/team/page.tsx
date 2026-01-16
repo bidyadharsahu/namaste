@@ -2,33 +2,73 @@
 
 import { motion } from 'framer-motion';
 import { FiMail } from 'react-icons/fi';
+import Image from 'next/image';
+
+function TeamMemberCard({ member, index }: { member: { name: string; title: string; bio: string; photo: string }; index: number }) {
+  return (
+    <motion.div
+      className="text-center group"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+    >
+      <div className="relative mb-6">
+        <div className="w-48 h-48 rounded-full overflow-hidden mx-auto group-hover:scale-105 transition-transform duration-300 shadow-lg">
+          <Image
+            src={member.photo}
+            alt={member.name}
+            width={192}
+            height={192}
+            className="object-cover w-full h-full"
+            unoptimized
+          />
+        </div>
+      </div>
+      <h3 className="text-2xl font-bold text-brand-black mb-2">
+        {member.name}
+      </h3>
+      <p className="text-brand-yellow font-semibold mb-4">
+        {member.title}
+      </p>
+      <p className="text-gray-600 leading-relaxed">
+        {member.bio}
+      </p>
+    </motion.div>
+  );
+}
 
 export default function TeamPage() {
   const leadership = [
     {
-      name: 'Hariswar',
+      name: 'Harishwar Reddy Nakka',
       title: 'Founder & CEO',
-      bio: 'With over 15 years in tech and transportation, Hariswar founded Namaste to bring fairness and transparency to ride-hailing.',
+      bio: 'Harishwar leads Namaste with a clear vision to build a reliable, people-first mobility platform. As a hands-on founder, he drives product direction, partnerships, and long-term strategy while learning and evolving alongside the team.',
+      photo: '/images/team/harishwar.jpg',
     },
     {
-      name: 'Prasad',
-      title: 'Chief Operating Officer',
-      bio: 'Prasad ensures operational excellence across all cities, maintaining our commitment to driver satisfaction and rider safety.',
+      name: 'Prasad Kalangi',
+      title: 'Co-Founder',
+      bio: 'Prasad supports the core operations and planning of Namaste. He works closely with the founding team to turn ideas into action, helping shape the foundation of the startup as it grows city by city.',
+      photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
     },
     {
-      name: 'Bidyadhar',
-      title: 'Head of Technology',
-      bio: 'Bidyadhar leads our engineering team, building smart systems that make rides safer, faster, and more efficient.',
+      name: 'Talagana Rajesh',
+      title: 'Full Stack Developer',
+      bio: 'Rajesh focuses on building and improving the Namaste platform end-to-end. From frontend to backend, he helps turn concepts into working features while continuously learning and adapting to startup challenges.',
+      photo: '/images/team/rajesh.jpg',
     },
     {
-      name: 'Rajesh',
-      title: 'Director of Customer Experience',
-      bio: 'Rajesh crafts exceptional experiences for both riders and drivers, ensuring everyone feels valued.',
+      name: 'Bidyadhar Sahu',
+      title: 'Cloud Developer & R&D',
+      bio: 'Bidyadhar works on cloud infrastructure, scalability, and research-driven solutions. He experiments with new technologies to make the platform more efficient, secure, and ready for future growth.',
+      photo: '/images/team/bidyadhar.jpg',
     },
     {
-      name: 'Abinash',
-      title: 'Marketing Director',
-      bio: 'Abinash drives our marketing strategy and brand presence, connecting Namaste with communities across India.',
+      name: 'Abinash Singh',
+      title: 'Application & Android Developer',
+      bio: 'Abinash develops and maintains the Namaste mobile application. He focuses on creating smooth, user-friendly app experiences while learning how to build scalable apps in a fast-moving startup environment.',
+      photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face',
     },
   ];
 
@@ -54,50 +94,11 @@ export default function TeamPage() {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="container-custom">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-brand-black mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Guided by vision, driven by excellence
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {leadership.map((member, index) => (
-              <motion.div
-                key={index}
-                className="text-center group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="relative mb-6">
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-brand-yellow to-orange-500 flex items-center justify-center mx-auto group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-white font-bold text-6xl">
-                      {member.name.charAt(0)}
-                    </span>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-brand-black mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-brand-yellow font-semibold mb-4">
-                  {member.title}
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  {member.bio}
-                </p>
-              </motion.div>
+              <TeamMemberCard key={index} member={member} index={index} />
             ))}
           </div>
         </div>

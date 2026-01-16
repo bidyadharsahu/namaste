@@ -29,13 +29,6 @@ export default function HomePage() {
     },
   ];
 
-  const stats = [
-    { number: '50,000+', label: 'Rides Completed' },
-    { number: '99.8%', label: 'Customer Satisfaction' },
-    { number: '3+', label: 'Cities Served' },
-    { number: '200+', label: 'Active Drivers' },
-  ];
-
   return (
     <main>
       <HeroSection />
@@ -81,26 +74,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Quote Section */}
       <section className="py-20 bg-brand-black">
         <div className="container-custom">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-brand-yellow mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 leading-relaxed">
+              <span className="text-brand-yellow text-5xl md:text-6xl font-serif align-top">"</span>
+              Every journey begins with trust. At Namaste, we're not just building rides, we're building relationships that move World forward.
+              <span className="text-brand-yellow text-5xl md:text-6xl font-serif align-bottom">"</span>
+            </blockquote>
+            <div className="mt-8">
+              <p className="text-lg text-brand-yellow font-semibold">Harishwar Reddy Nakka</p>
+              <p className="text-gray-400">Founder & CEO, Namaste Rides</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
