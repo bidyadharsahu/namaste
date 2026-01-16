@@ -86,7 +86,7 @@ export default function HomePage() {
           >
             <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 leading-relaxed">
               <span className="text-brand-yellow text-5xl md:text-6xl font-serif align-top">"</span>
-              Every journey begins with trust. At Namaste, we're not just building rides, we're building relationships that move World forward.
+              Every journey begins with trust. At Namaste, we are not just building rides, we are building relationships that move industry forward.
               <span className="text-brand-yellow text-5xl md:text-6xl font-serif align-bottom">"</span>
             </blockquote>
             <div className="mt-8">
